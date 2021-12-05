@@ -2,6 +2,13 @@
   font-family: monospace;
 }
 
+thead tr:nth-child(1) th {
+  background: white!important;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .pagination-wrapper input {
   width: 5rem;
 }
