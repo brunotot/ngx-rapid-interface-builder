@@ -11,7 +11,7 @@ import ReactiveInput from '../../../../model/ReactiveInput';
   encapsulation: ViewEncapsulation.None
 })
 export class ColorComponent extends ReactiveInput implements OnInit {
-  override defaultClass: string = 'checkbox';
+  override defaultClass: string = 'rib-color';
 
   constructor() {
     super();

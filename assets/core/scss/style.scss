@@ -139,6 +139,14 @@ textarea:hover,
 
 .checkbox {
   border-radius: .25em;
+  background-size: 1.5rem 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-color: $color-input-border !important
+}
+
+.rib-color {
+  border-radius: .25em;
   height: 2.35rem;
   width: 2.35rem;
   border-color: $color-input-border !important
