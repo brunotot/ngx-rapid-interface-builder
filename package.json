@@ -1,6 +1,6 @@
 {
   "name": "ngx-painless-form",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "lib:deploy": "npm run lib:build && cd ./../../dist/ngx-rapid-interface-builder && npm publish",
     "lib:build": "ng-packagr -p ng-package.json && cd ../ngx-rapid-interface-builder-test/src/app && echo '' >> app.module.ts && clear"
