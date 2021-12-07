@@ -1,0 +1,27 @@
+.body-wrapper {
+  display: flex;
+  min-height: calc(100% - 3rem);
+}
+
+.content-wrapper {
+  flex: 1;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content-wrapper-margin {
+  margin-left: 250px;
+}
+
+
+@media (max-width: 600px) {
+  .content-wrapper {
+    margin-left: 0
+  }
+  .content-wrapper-margin {
+    background-color: #808080;
+    opacity: 0.5;
+  }
+}
