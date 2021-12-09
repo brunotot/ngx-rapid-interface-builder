@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href \"https://brunotot.github.io/ngx-rapid-interface-builder/\"",
+    "deploy-gh": "npx angular-cli-ghpages --dir=dist/ngx-rib-demo",
+    "deploy": "npm run build && npm run deploy-gh",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
