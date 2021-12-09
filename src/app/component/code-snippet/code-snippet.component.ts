@@ -1,4 +1,16 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+const DEFAULT_LANGUAGE = 'plaintext';
+const ASSETS_FOLDER_CONTEXT_PATH = 'assets/code/';
+
+const language: { [key: string]: string } = {
+  ts: 'typescript',
+  js: 'javascript',
+  html: 'html',
+  scss: 'scss',
+  css: 'css'
+}
 
 @Component({
   selector: 'app-code-snippet',
@@ -7,9 +19,25 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 })
 export class CodeSnippetComponent implements OnInit {
   @Input() code!: string;
-  @Input() language!: string;
-  @Input() usePre: boolean = true;
-  @ViewChild("codeElem") codeElem!: ElementRef;
+  @Input() fileName: string = '';
+  @Input() language: string = DEFAULT_LANGUAGE;
+  ready: boolean = false;
+
+  constructor(private http: HttpClient) { 
+  }
+
+  ngOnInit(): void {
+    if (this.fileName && !this.code) {
+      this.setLanguageByFileName();
+      this.http.get(`${ASSETS_FOLDER_CONTEXT_PATH}${this.fileName}`, { responseType: 'text' })
+        .subscribe(fileText => {
+          this.code = fileText.trim();
+          this.ready = true;
+        });
+      return;
+    }
+    this.ready = true;
+  }
 
   copyMessage(val: string){
     const selBox = document.createElement('textarea');
@@ -29,9 +57,13 @@ export class CodeSnippetComponent implements OnInit {
     this.copyMessage(this.code);
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  setLanguageByFileName() {
+    let indexOfDot = this.fileName.indexOf('.');
+    if (indexOfDot === -1) {
+      this.language = DEFAULT_LANGUAGE;
+      return;
+    }
+    let fileExtension = this.fileName.substring(indexOfDot + 1);
+    this.language = fileExtension ? language[fileExtension] : DEFAULT_LANGUAGE;
   }
-
 }

@@ -1,6 +1,153 @@
-<div [ngClass]="'sidebar'.concat(showSidebar ? ' sidebar-show' : '')">
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+<div [ngClass]="'flex-shrink-0 bg-white card shadow sidebar'.concat(showSidebar ? ' sidebar-show' : '')">
+  <span class="d-flex align-items-center link-primary text-decoration-none border-bottom card-header fs-6 fw-semibold collapsible" data-bs-toggle="collapse" data-bs-target="#introduction-collapse" aria-expanded="true">
+    Introduction
+  </span>
+  <div class="collapse show" id="introduction-collapse">
+    <ul class="list-unstyled p-2 mb-0 scroll-hover-white" style="overflow-y: auto; overflow-x: hidden">
+      <li class="mb-1">
+        <button class="btn align-items-center rounded nav-btn">
+          Getting started
+        </button>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#basic-collapse" aria-expanded="false">
+          Basic examples
+        </button>
+        <div class="collapse" id="basic-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Example1</a></li>
+            <li><a href="#" class="link-dark rounded">Example2</a></li>
+            <li><a href="#" class="link-dark rounded">Example3</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#advanced-collapse" aria-expanded="false">
+          Advanced examples
+        </button>
+        <div class="collapse" id="advanced-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Example1</a></li>
+            <li><a href="#" class="link-dark rounded">Example2</a></li>
+            <li><a href="#" class="link-dark rounded">Example3</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <span class="d-flex align-items-center link-primary text-decoration-none border-bottom border-top card-header fs-6 fw-semibold collapsible" data-bs-toggle="collapse" data-bs-target="#documentation-collapse" aria-expanded="true">
+    Documentation
+  </span>
+  <div class="collapse show" id="documentation-collapse">
+    <ul class="list-unstyled p-2 mb-0 scroll-hover-white" style="overflow-y: auto; overflow-x: hidden">
+      <li class="mb-1">
+        <button class="btn align-items-center rounded nav-btn">
+          <i class="fas fa-code text-primary"></i>
+          Source code
+        </button>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+          Components
+        </button>
+        <div class="collapse" id="components-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Example1</a></li>
+            <li><a href="#" class="link-dark rounded">Example2</a></li>
+            <li><a href="#" class="link-dark rounded">Example3</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#enums-collapse" aria-expanded="false">
+          Enums
+        </button>
+        <div class="collapse" id="enums-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Example1</a></li>
+            <li><a href="#" class="link-dark rounded">Example2</a></li>
+            <li><a href="#" class="link-dark rounded">Example3</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#interfaces-collapse" aria-expanded="false">
+          Interfaces
+        </button>
+        <div class="collapse" id="interfaces-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Example1</a></li>
+            <li><a href="#" class="link-dark rounded">Example2</a></li>
+            <li><a href="#" class="link-dark rounded">Example3</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#classes-collapse" aria-expanded="false">
+          Classes
+        </button>
+        <div class="collapse" id="classes-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Example1</a></li>
+            <li><a href="#" class="link-dark rounded">Example2</a></li>
+            <li><a href="#" class="link-dark rounded">Example3</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <span class="d-flex align-items-center link-primary text-decoration-none border-bottom border-top card-header fs-6 fw-semibold collapsible" data-bs-toggle="collapse" data-bs-target="#contribute-collapse" aria-expanded="true">
+    Contribution
+  </span>
+  <div class="collapse show" id="contribute-collapse">
+    <ul class="list-unstyled p-2 mb-0 scroll-hover-white" style="overflow-y: auto; overflow-x: hidden">
+      <li class="mb-1">
+        <a href="https://github.com/brunotot/ngx-rapid-interface-builder/discussions/categories/general"
+           type="button" 
+           target="_blank"
+           class="btn align-items-center rounded nav-btn">
+           <i class="far fa-comments"></i>
+           General discussion
+        </a>
+      </li>
+      <li class="mb-1">
+        <a href="https://github.com/brunotot/ngx-rapid-interface-builder/discussions/categories/bug-report"
+           type="button" 
+           target="_blank"
+           class="btn align-items-center rounded nav-btn">
+          <i class="fas fa-bug" style="color: #A52A2A"></i>
+          Report a bug
+        </a>
+      </li>
+      <li class="mb-1">
+        <a href="https://github.com/brunotot/ngx-rapid-interface-builder/discussions/categories/bug-report"
+           type="button" 
+           target="_blank"
+           class="btn align-items-center rounded nav-btn">
+          <i class="fas fa-rocket text-primary"></i>
+          Request a new feature
+        </a>
+      </li>
+      <li class="mb-1">
+        <a href="https://github.com/brunotot/ngx-rapid-interface-builder/discussions/categories/ideas"
+           type="button" 
+           target="_blank"
+           class="btn align-items-center rounded nav-btn">
+          <i class="far fa-lightbulb" style="color: #FFAA33"></i>
+          Have an idea?
+        </a>
+      </li>
+      <li class="mb-1">
+        <a href="https://github.com/brunotot/ngx-rapid-interface-builder/discussions/categories/q-a"
+           type="button" 
+           target="_blank"
+           class="btn align-items-center rounded nav-btn">
+          <i class="fas fa-question" style="color: #097969"></i>
+          Ask a question
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

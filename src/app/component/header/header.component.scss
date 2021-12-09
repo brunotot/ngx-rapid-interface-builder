@@ -1,9 +1,14 @@
+.menu-btn:hover {
+  cursor: pointer;
+}
+
 header {
   display: flex;
   width: 100%;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 2;
-  height: 4rem;
+  height: 4.2rem;
   flex-wrap: nowrap;
   gap: 1rem;
 }

@@ -9,6 +9,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { CodeSnippetComponent } from './component/code-snippet/code-snippet.component';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,18 @@ import { CodeSnippetComponent } from './component/code-snippet/code-snippet.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxPainlessFormModule
+    NgxPainlessFormModule,
+    HighlightModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

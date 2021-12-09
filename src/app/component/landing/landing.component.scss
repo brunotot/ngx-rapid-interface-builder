@@ -1,0 +1,11 @@
+.title-logo-wrapper > * {
+  max-width: 7rem;
+  height: auto;
+}
+
+.title-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  flex-wrap: nowrap;
+}
