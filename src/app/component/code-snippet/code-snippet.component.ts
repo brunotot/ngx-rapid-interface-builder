@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ToastService } from 'ngx-painless-form';
 
 const DEFAULT_LANGUAGE = 'plaintext';
 const ASSETS_FOLDER_CONTEXT_PATH = 'assets/code/';
@@ -23,7 +24,7 @@ export class CodeSnippetComponent implements OnInit {
   @Input() language: string = DEFAULT_LANGUAGE;
   ready: boolean = false;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient, private toast: ToastService) { 
   }
 
   ngOnInit(): void {
@@ -54,7 +55,12 @@ export class CodeSnippetComponent implements OnInit {
   }
 
   onCopyClick() {
-    this.copyMessage(this.code);
+    try {
+      this.copyMessage(this.code);
+      this.toast.showSuccess('', 'Successfully copied to clipboard')
+    } catch (_) {
+      this.toast.showError('', 'An error occurred while copying to clipboard')
+    }
   }
 
   setLanguageByFileName() {

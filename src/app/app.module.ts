@@ -10,7 +10,7 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { CodeSnippetComponent } from './component/code-snippet/code-snippet.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
