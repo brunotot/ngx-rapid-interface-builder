@@ -1,6 +1,20 @@
-<header>
-  <button (click)="toggleSidebar()" class="btn btn-primary">Toggle</button>
-  <div>
-    Header content
+<header class="navbar navbar-light bg-light sticky-top p-2 shadow">
+  <button (click)="toggleSidebar()" class="btn btn-primary">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="header-content">
+    <span class="code-install">
+      <app-code-snippet
+        [usePre]="false"
+        code="npm i ngx-painless-form"
+        language="typescript">  
+      </app-code-snippet>
+    </span>
+    <a class="text-decoration-none" style="color: rgb(203,56,55)" href="https://www.npmjs.com/package/ngx-painless-form" target="_blank">
+      <i class="fab fa-npm fa-2x"></i>
+    </a>
+    <a class="text-decoration-none text-dark" href="https://github.com/brunotot/ngx-rapid-interface-builder" target="_blank">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
   </div>
 </header>

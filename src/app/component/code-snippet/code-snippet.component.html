@@ -1,0 +1,16 @@
+<pre *ngIf="usePre">
+  <div class="code-wrapper position-relative">
+    <code *ngIf="!usePre" [ngClass]="'language-'.concat(language, ' hljs cs-code')">
+      {{ code }}
+    </code>
+    <span (click)="onCopyClick()" class="btn-copy"></span>
+  </div>
+</pre>
+
+<div class="code-wrapper position-relative">
+  <code *ngIf="!usePre" [ngClass]="'language-'.concat(language, ' hljs cs-code')">
+    {{ code }}
+  </code>
+  <span (click)="onCopyClick()" class="btn-copy"></span>
+</div>
+

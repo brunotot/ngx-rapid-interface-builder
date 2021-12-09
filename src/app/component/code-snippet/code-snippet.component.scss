@@ -1,0 +1,34 @@
+.cs-code {
+  border-radius: 0.5rem;
+  border: 8px solid #EEEEEE;
+  background-color: #F8F8F8;
+  margin: 0 !important;
+  padding: 0.5rem 1rem !important;
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.btn-copy {
+  content: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='copy' class='svg-inline--fa fa-copy fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='currentColor' d='M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z'%3E%3C/path%3E%3C/svg%3E");;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 6px 6px 6px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid lightgrey;
+  border-radius: 0.25rem;
+  background-color:white;
+  cursor: pointer;
+  display: none;
+}
+
+.btn-copy:hover {
+  background-color:linen;
+  border: 1px solid lightblue
+}
+
+.code-wrapper:hover .btn-copy {
+  display: block;
+}
