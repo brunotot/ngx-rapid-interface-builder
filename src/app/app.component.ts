@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngx-rib-demo';
-  showSidebar: boolean = true;
+  showSidebar: boolean = false;
 
   toggleSidebar() {
     this.showSidebar = !this.showSidebar;

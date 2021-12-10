@@ -11,6 +11,7 @@ import { LandingComponent } from './component/landing/landing.component';
 import { CodeSnippetComponent } from './component/code-snippet/code-snippet.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { HttpClientModule } from '@angular/common/http';
+import { PlaygroundComponent } from './component/playground/playground.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     SidebarComponent,
     LandingComponent,
-    CodeSnippetComponent
+    CodeSnippetComponent,
+    PlaygroundComponent
   ],
   imports: [
     BrowserModule,

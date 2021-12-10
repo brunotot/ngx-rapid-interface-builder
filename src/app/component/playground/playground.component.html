@@ -1,0 +1,44 @@
+<h1 class="text-center mt-2 mb-4">Playground</h1>
+
+<!--<div class="d-flex flex-column align-items-center" style="row-gap: 3rem">-->
+
+  <div class="my-4">
+    <rib-base-form #formElem
+      [form]="generatedForm"
+      [fnSubmit]="onSubmitFn"
+      formTitle="Generated form">
+    </rib-base-form>
+  </div>
+
+  <div class="py-4">
+    <div class="card shadow">
+      <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="header-title color-primary">Form configuration</h6>
+      </div>
+      <div class="card-body">
+        <rib-datatable
+          [formControlWrapper]="formInstance"
+          [getDisplayName]="getDisplayName"
+          [ajax]="ajax">
+        </rib-datatable>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-4">
+    <div class="card shadow">
+      <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="header-title color-primary">Generated code snippet</h6>
+      </div>
+      <div class="card-body">
+        <app-code-snippet
+          language="typescript"
+          [code]="generatedCode">
+        </app-code-snippet>
+      </div>
+    </div>
+  </div>
+<!--</div>-->
+
+
+

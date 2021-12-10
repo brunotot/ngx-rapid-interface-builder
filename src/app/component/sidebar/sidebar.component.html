@@ -1,11 +1,11 @@
-<div [ngClass]="'flex-shrink-0 bg-white card shadow sidebar'.concat(showSidebar ? ' sidebar-show' : '')">
-  <span class="d-flex align-items-center link-primary text-decoration-none border-bottom card-header fs-6 fw-semibold collapsible" data-bs-toggle="collapse" data-bs-target="#introduction-collapse" aria-expanded="true">
+<div [ngClass]="'flex-shrink-0 bg-white card shadow scrollbar scrollbar-y sidebar'.concat(showSidebar ? ' sidebar-show' : '')">
+  <span class="d-flex align-items-center link-primary text-decoration-none border-bottom border-top card-header fs-6 fw-semibold collapsible" data-bs-toggle="collapse" data-bs-target="#introduction-collapse" aria-expanded="true">
     Introduction
   </span>
   <div class="collapse show" id="introduction-collapse">
     <ul class="list-unstyled p-2 mb-0 scroll-hover-white" style="overflow-y: auto; overflow-x: hidden">
       <li class="mb-1">
-        <button class="btn align-items-center rounded nav-btn">
+        <button [routerLink]="['']" class="btn align-items-center rounded nav-btn">
           Getting started
         </button>
       </li>
@@ -13,7 +13,7 @@
         <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#basic-collapse" aria-expanded="false">
           Basic examples
         </button>
-        <div class="collapse" id="basic-collapse">
+        <div class="collapse collapse-static" id="basic-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a href="#" class="link-dark rounded">Example1</a></li>
             <li><a href="#" class="link-dark rounded">Example2</a></li>
@@ -25,13 +25,18 @@
         <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#advanced-collapse" aria-expanded="false">
           Advanced examples
         </button>
-        <div class="collapse" id="advanced-collapse">
+        <div class="collapse collapse-static" id="advanced-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a href="#" class="link-dark rounded">Example1</a></li>
             <li><a href="#" class="link-dark rounded">Example2</a></li>
             <li><a href="#" class="link-dark rounded">Example3</a></li>
           </ul>
         </div>
+      </li>
+      <li class="mb-1">
+        <button [routerLink]="['playground']" class="btn align-items-center rounded nav-btn text-danger">
+          PLAYGROUND
+        </button>
       </li>
     </ul>
   </div>
@@ -51,7 +56,7 @@
         <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
           Components
         </button>
-        <div class="collapse" id="components-collapse">
+        <div class="collapse collapse-static" id="components-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a href="#" class="link-dark rounded">Example1</a></li>
             <li><a href="#" class="link-dark rounded">Example2</a></li>
@@ -63,7 +68,7 @@
         <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#enums-collapse" aria-expanded="false">
           Enums
         </button>
-        <div class="collapse" id="enums-collapse">
+        <div class="collapse collapse-static" id="enums-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a href="#" class="link-dark rounded">Example1</a></li>
             <li><a href="#" class="link-dark rounded">Example2</a></li>
@@ -75,7 +80,7 @@
         <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#interfaces-collapse" aria-expanded="false">
           Interfaces
         </button>
-        <div class="collapse" id="interfaces-collapse">
+        <div class="collapse collapse-static" id="interfaces-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a href="#" class="link-dark rounded">Example1</a></li>
             <li><a href="#" class="link-dark rounded">Example2</a></li>
@@ -87,7 +92,7 @@
         <button class="btn btn-toggle align-items-center rounded collapsed nav-btn" data-bs-toggle="collapse" data-bs-target="#classes-collapse" aria-expanded="false">
           Classes
         </button>
-        <div class="collapse" id="classes-collapse">
+        <div class="collapse collapse-static" id="classes-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a href="#" class="link-dark rounded">Example1</a></li>
             <li><a href="#" class="link-dark rounded">Example2</a></li>
@@ -101,7 +106,7 @@
   <span class="d-flex align-items-center link-primary text-decoration-none border-bottom border-top card-header fs-6 fw-semibold collapsible" data-bs-toggle="collapse" data-bs-target="#contribute-collapse" aria-expanded="true">
     Contribution
   </span>
-  <div class="collapse show" id="contribute-collapse">
+  <div class="collapse border-bottom show" id="contribute-collapse">
     <ul class="list-unstyled p-2 mb-0 scroll-hover-white" style="overflow-y: auto; overflow-x: hidden">
       <li class="mb-1">
         <a href="https://github.com/brunotot/ngx-rapid-interface-builder/discussions/categories/general"
@@ -122,7 +127,7 @@
         </a>
       </li>
       <li class="mb-1">
-        <a href="https://github.com/brunotot/ngx-rapid-interface-builder/discussions/categories/bug-report"
+        <a href="https://github.com/brunotot/ngx-rapid-interface-builder/discussions/categories/feature-requests"
            type="button" 
            target="_blank"
            class="btn align-items-center rounded nav-btn">
