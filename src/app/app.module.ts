@@ -12,6 +12,7 @@ import { CodeSnippetComponent } from './component/code-snippet/code-snippet.comp
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { HttpClientModule } from '@angular/common/http';
 import { PlaygroundComponent } from './component/playground/playground.component';
+import { CodeSnippetService } from './service/code-snippet.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { PlaygroundComponent } from './component/playground/playground.component
     HighlightModule,
     HttpClientModule
   ],
-  providers: [
+  providers: [CodeSnippetService,
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {

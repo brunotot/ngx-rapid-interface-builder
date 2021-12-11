@@ -3,7 +3,7 @@
 <!--<div class="d-flex flex-column align-items-center" style="row-gap: 3rem">-->
 
   <div class="my-4">
-    <rib-base-form #formElem
+    <rib-base-form
       [form]="generatedForm"
       [fnSubmit]="onSubmitFn"
       formTitle="Generated form">
@@ -28,7 +28,20 @@
   <div class="my-4">
     <div class="card shadow">
       <div class="card-header py-3 d-flex justify-content-between align-items-center">
-        <h6 class="header-title color-primary">Generated code snippet</h6>
+        <h6 class="header-title color-primary">app.component.html</h6>
+      </div>
+      <div class="card-body">
+        <app-code-snippet
+          fileName="example-form.html">
+        </app-code-snippet>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-4">
+    <div class="card shadow">
+      <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="header-title color-primary">app.component.ts</h6>
       </div>
       <div class="card-body">
         <app-code-snippet
