@@ -1,8 +1,20 @@
 html, 
 body,
 .page-wrapper {
-  height: 100%;
+  height: auto;
   min-height: 100%;
+}
+
+*:not(.fa):not(.fab):not(.far):not(.fas):not(code):not(code *) {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+code * {
+  font-family: monospace !important;
+}
+
+.modal-dialog {
+  margin-top: 5rem!important
 }
 
 .scrollbar-y::-webkit-scrollbar {
